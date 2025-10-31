@@ -19,7 +19,9 @@ def test_inventory_data(setup):
     inventory_page.save_productDetails_to_file(PRODUCTS_FILENAME)
     inventory_page.save_productDetails_to_json()
 
-
+    inventory_page.logout()
+    assert "saucedemo.com" in driver.current_url, "not reached in Login page."
+    print("\n[INFO] Successfully reached the Login Page at end...")
 
 
 

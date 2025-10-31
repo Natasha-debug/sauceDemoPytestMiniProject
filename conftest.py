@@ -1,16 +1,16 @@
 import pytest
-from selenium import webdriver
+from utiles.driver import get_driver
+
 driver = None
 
 
 @pytest.fixture(scope='class')
 def setup(request):
     global driver
-    driver = webdriver.Chrome()
+    driver = get_driver()
     print("\n[INFO] Launching Chrome browser...")
     driver.get("https://www.saucedemo.com/")
     driver.maximize_window()
-    #request.cls.driver = driver
     yield driver
     print("\n[INFO] Closing browser...")
     driver.quit()

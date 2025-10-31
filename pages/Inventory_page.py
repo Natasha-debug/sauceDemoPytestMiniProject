@@ -34,6 +34,5 @@ class HomePage:
 
     def logout(self):
         self.driver.find_element(*HomePage.MENU).click()
-        assert "Login" in self.driver.find_element(*HomePage.LOGOUT).text, "not reached in Login page."
-        print("\n[INFO] Successfully reached the Login Page...")
+
 

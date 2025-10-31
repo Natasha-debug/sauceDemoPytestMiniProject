@@ -1,4 +1,5 @@
 selenium
 pytest
-pytest-bdd
 pytest-html
+behave
+behave-html-formatter
