@@ -31,3 +31,9 @@ class HomePage:
             json.dump(data, f, indent=4)
 
         print(f"[INFO] Product data saved successfully to {filename}")
+
+    def logout(self):
+        self.driver.find_element(*HomePage.MENU).click()
+        assert "Login" in self.driver.find_element(*HomePage.LOGOUT).text, "not reached in Login page."
+        print("\n[INFO] Successfully reached the Login Page...")
+
