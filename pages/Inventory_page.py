@@ -9,7 +9,10 @@ class HomePage:
     PRODUCT_DESC = (By.CSS_SELECTOR, ".inventory_item_desc")
     MENU = (By.CSS_SELECTOR, "#react-burger-menu-btn")
     LOGOUT = (By.CSS_SELECTOR, "#logout_sidebar_link")
+    APP_LOGO = (By.CSS_SELECTOR, ".app_logo")
 
+    def verify_app_logo(self):
+        self.driver.find_element(*HomePage.APP_LOGO).is_displayed()
 
     def get_products_with_desc(self):
         products = self.driver.find_elements(*HomePage.PRODUCTS)

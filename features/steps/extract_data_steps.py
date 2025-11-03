@@ -11,7 +11,7 @@ def step_login(context):
     login_page = LoginPage(context.driver)
     login_page.open_login_page()
     login_page.login("standard_user", "secret_sauce")
-
+    login_page.click_login()
     assert "inventory.html" in context.driver.current_url, "Login Failed."
 
 

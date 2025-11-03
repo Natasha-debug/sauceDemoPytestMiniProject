@@ -19,6 +19,8 @@ class LoginPage:
     def login(self, username, pwd):
         self.driver.find_element(*LoginPage.USERNAME).send_keys(username)
         self.driver.find_element(*LoginPage.PWD).send_keys(pwd)
+
+    def click_login(self):
         self.driver.find_element(*LoginPage.LOGINBTN).click()
 
     def get_error_msg(self):
