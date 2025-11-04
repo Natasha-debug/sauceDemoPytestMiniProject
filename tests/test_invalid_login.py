@@ -12,6 +12,7 @@ def test_invalid_logins(setup, username, password, expected_error):
     login_page = LoginPage(driver)
     login_page.open_login_page()
     login_page.login(username, password)
+    login_page.click_login()
     actual_error = login_page.get_error_msg()
 
     assert actual_error == expected_error, f" Expected '{expected_error}', but got '{actual_error}'"

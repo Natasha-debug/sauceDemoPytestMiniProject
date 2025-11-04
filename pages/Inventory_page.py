@@ -12,7 +12,7 @@ class HomePage:
     APP_LOGO = (By.CSS_SELECTOR, ".app_logo")
 
     def verify_app_logo(self):
-        self.driver.find_element(*HomePage.APP_LOGO).is_displayed()
+        return self.driver.find_element(*HomePage.APP_LOGO).is_displayed()
 
     def get_products_with_desc(self):
         products = self.driver.find_elements(*HomePage.PRODUCTS)

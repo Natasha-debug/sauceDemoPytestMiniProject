@@ -8,6 +8,7 @@ def test_inventory_data(setup):
     login_page = LoginPage(driver)
     login_page.open_login_page()
     login_page.login("standard_user", "secret_sauce")
+    login_page.click_login()
 
     assert "inventory.html" in driver.current_url, "Login Failed."
 
